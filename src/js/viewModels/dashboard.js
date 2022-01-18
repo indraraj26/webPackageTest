@@ -8,8 +8,8 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['../accUtils', "customTimeAgo"],
- function(accUtils, customTimeAgo) {
+define(['../accUtils', "customTimeAgo", "timeAgoEn"],
+ function(accUtils, customTimeAgo, timeAgoEn) {
     function DashboardViewModel() {
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
@@ -25,9 +25,13 @@ define(['../accUtils', "customTimeAgo"],
       this.connected = () => {
         accUtils.announce('Dashboard page loaded.', 'assertive');
         document.title = "Dashboard";
-        const timeAgo = new customTimeAgo.TimeAgo('en-US')
+        customTimeAgo.TimeAgo.addDefaultLocale(en)
 
+        // Create formatter (English).
+        const timeAgo = new customTimeAgo.TimeAgo('en-US')
+        
         timeAgo.format(new Date())
+        
         // Implement further logic if needed
       };
 

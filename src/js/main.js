@@ -49,7 +49,8 @@
   'touchr': 'libs/touchr/touchr'
   ,
         'chai': 'libs/chai/chai-4.3.4',
-        "customTimeAgo": "libs/javascript-time-ago/bundle/javascript-time-ago.js"
+        "customTimeAgo": "libs/javascript-time-ago/bundle/javascript-time-ago.js",
+        "timeAgoEn": "libs/javascript-time-ago/locale/en.json",
       }
       // endinjector
     }
