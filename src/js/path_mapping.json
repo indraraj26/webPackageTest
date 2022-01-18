@@ -32,11 +32,11 @@
       "cwd": "node_modules/javascript-time-ago",
       "debug": {
         "src":  ["**"],
-        "path": "libs/javascript-time-ago/bundle/javascript-time-ago.js"
+        "path": "libs/javascript-time-ago"
       },
       "release": {
         "src":  ["**"],
-        "path": "libs/javascript-time-ago/bundle/javascript-time-ago.min.js"
+        "path": "libs/javascript-time-ago"
       }
     },
  

@@ -25,12 +25,13 @@ define(['../accUtils', "customTimeAgo", "timeAgoEn"],
       this.connected = () => {
         accUtils.announce('Dashboard page loaded.', 'assertive');
         document.title = "Dashboard";
-        customTimeAgo.TimeAgo.addDefaultLocale(timeAgoEn)
+        console.log(customTimeAgo)
+        // customTimeAgo.TimeAgo.addDefaultLocale(timeAgoEn)
 
-        // Create formatter (English).
-        const timeAgo = new customTimeAgo.TimeAgo('en-US')
+        // // Create formatter (English).
+        // const timeAgo = new customTimeAgo.TimeAgo('en-US')
         
-        timeAgo.format(new Date())
+        // timeAgo.format(new Date())
         
         // Implement further logic if needed
       };
