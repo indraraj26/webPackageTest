@@ -20,12 +20,26 @@
    ```
 2. Go to main.js and add
   ```
-        "customTimeAgo": "libs/javascript-time-ago/bundle/javascript-time-ago.js"
+        "customTimeAgo": "libs/javascript-time-ago/bundle/javascript-time-ago.js",
+        "timeAgoEn": "libs/javascript-time-ago/locale/en.json",
   ```
 3. in dashboard viewModels
   ```
-   "customTimeAgo"
+   "customTimeAgo", "timeAgoEn"
   ```
+```
+ this.connected = () => {
+        customTimeAgo.TimeAgo.addDefaultLocale(timeAgoEn)
+
+        // Create formatter (English).
+        const timeAgo = new customTimeAgo.TimeAgo('en-US')
+        
+        timeAgo.format(new Date())
+        
+        // Implement further logic if needed
+      };
+```
+
 
 # Issue
 If you go to web folder after the ojet serve then you will find that it is creating one more directory
